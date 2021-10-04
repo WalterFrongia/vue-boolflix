@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>,
+    <Header @search="loadMovies"/>,
     <Main/>,
   </div>
 </template>
@@ -14,7 +14,13 @@ export default {
   components: {
     Header,
     Main,
-  }
+  },
+  methods:{
+    loadMovies: function(inputMessage){
+      console.log(inputMessage);
+      
+    }
+  },
 }
 </script>
 
