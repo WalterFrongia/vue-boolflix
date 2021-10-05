@@ -1,22 +1,29 @@
 <template>
     <div id="card-container">
-        <div class="card-element" 
-        v-for="(card, index) in listaFilm" :key="index">
-        <ul>
-            <li>{{card.title}}</li>
-        </ul>
-        </div>
+        <card v-for="(card, index) in listaFilm" :key="index" :title="card.title"/>
     </div>
 </template>
 
 <script>
+import Card from './Card.vue'
+
 export default {
     name:"Content",
-    props:["listaFilm"]
+    props:["listaFilm"],
+    components: {
+        Card,
+    },
 
 }
 </script>
 
 <style lang="scss" scoped>
 
+#card-container{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin:auto;
+    width:80%;
+}
 </style>
