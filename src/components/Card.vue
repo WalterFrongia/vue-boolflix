@@ -2,7 +2,9 @@
     <div class="card-element">
         <p>{{title}}</p>
         <p>{{originalTitle}}</p>
-        <p>{{lang}}</p>
+        <img v-if="lang == 'it' " src="../assets/images/italian_flag.png" alt="">
+        <img v-else-if="lang == 'en' " src="../assets/images/english_flag.png" alt="">
+        <p v-else>{{lang}}</p>
         <p>{{vote}}</p>
     </div>
 </template>
@@ -21,5 +23,8 @@ export default {
     margin:5px;
 
     flex-basis: calc(100% / 5 - 25px);
+    img{
+        width: 10%;
+    }
 }
 </style>
