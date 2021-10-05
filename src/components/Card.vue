@@ -1,6 +1,5 @@
 <template>
     <div class="card-element">
-        <img :src="images" alt="">
         <p>{{title}}</p>
         <p>{{originalTitle}}</p>
         <p>{{lang}}</p>
