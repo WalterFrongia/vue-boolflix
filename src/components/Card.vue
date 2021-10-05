@@ -1,13 +1,16 @@
 <template>
     <div class="card-element">
-        <img :src="img" alt="">
+        <img :src="images" alt="">
         <p>{{title}}</p>
+        <p>{{originalTitle}}</p>
+        <p>{{lang}}</p>
+        <p>{{vote}}</p>
     </div>
 </template>
 
 <script>
 export default {
-    props:["title"],
+    props:["title","originalTitle","lang","vote"],
 }
 </script>
 

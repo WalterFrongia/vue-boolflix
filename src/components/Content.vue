@@ -1,6 +1,6 @@
 <template>
     <div id="card-container">
-        <card v-for="(card, index) in listaFilm" :key="index" :title="card.title"/>
+        <card v-for="(card, index) in listaFilm" :key="index" :title="card.title" :originalTitle="card.original_title" :lang="card.original_language" :vote="card.vote_average"/>
     </div>
 </template>
 
